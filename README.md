@@ -108,5 +108,7 @@ where date(lpep_pickup_datetime) between '2022-06-01' and '2022-06-30'
 
 ```SQL
 -- partitioned table
-
+select max(lpep_pickup_datetime) as ma, count(distinct PULocationID) cant
+from `dez-2024.nyc_taxi.green_tripdata_2022_partitioned_clustered`
+where date(lpep_pickup_datetime) between '2022-06-01' and '2022-06-30'
 ```
